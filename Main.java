@@ -1,36 +1,37 @@
 import java.util.Scanner;
 
 public class Main {
-static int Result;
-    public static void addition(int n1,int n2){
+   static double Result;
+    public static void addition(double n1,double n2){
           Result = n1 + n2;
         System.out.println("your result is : " + Result);
     }
-    public static void subtract(int n1,int n2){
+    public static void subtract(double n1,double n2){
           Result = n1 - n2;
         System.out.println("your result is :" + Result);
     }
-    public static void multiply(int n1,int n2){
+    public static void multiply(double n1,double n2){
         Result = n1 * n2;
         System.out.println("your result is :" + Result);
     }
-    public static void divide(int n1,int n2){
-        if(n1==0 || n2==0 ){
-            System.out.println("Error 404");
-
+    public static void divide(double n1,double n2){
+        if(n2==0 ){
+            System.out.println("DIVIDE BY 0");
+        return;
         }
-        int Result = n1 / n2;
+        double Result = n1 / n2;
         System.out.println("your result is  :" + Result);
+
     }
-    public static void power(int n1,int n2){
+    public static void power(double n1,double n2){
         int operation2;
 
         System.out.println("1power to 2");
 
-        int result = (int) Math.pow(n1, n2);
+        double result = (double) Math.pow(n1, n2);
         System.out.println("your result is :"+ result);
     }
-    public static void square_root (int n1,int n2) {
+    public static void square_root (double n1,double n2) {
         if (n1 <= 0) {
             System.out.println("Error 404 ");
 
@@ -42,7 +43,7 @@ static int Result;
             System.out.println("second number your result is " + sqrtResult2);
         }
     }
-        static void factorial(int n1,int n2){
+        static void factorial(double n1,double n2){
             if(n1 <= 0) {
                 System.out.println("Error 404");
             }else{
@@ -61,7 +62,8 @@ static int Result;
 
 
     public static void main (String[] args) {
-        int operation,n1,n2;
+        int operation;
+        double n1,n2;
 
         do {
             System.out.println("1-add\n 2-subtract\n 3-multiply\n 4-divide\n 5-power\n 6-square_root\n 7-factorial\n0-exit");
