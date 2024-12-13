@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-   static double Result;
+    static double Result;
     public static void addition(double n1,double n2){
           Result = n1 + n2;
         System.out.println("your result is : " + Result);
@@ -28,7 +28,7 @@ public class Main {
 
         System.out.println("1power to 2");
 
-        double result = (double) Math.pow(n1, n2);
+        int result = (int) Math.pow(n1, n2);
         System.out.println("your result is :"+ result);
     }
     public static void square_root (double n1,double n2) {
@@ -44,18 +44,18 @@ public class Main {
         }
     }
         static void factorial(double n1,double n2){
-            if(n1 <= 0) {
+            if(n1 <0) {
+
+
                 System.out.println("Error 404");
             }else{
-                long factorial=1,factorial2=1;
+                long factorial=1;
                 for(int i=1; i<=n1;i++){
                     factorial *=i;
                 }
-                for(int i=1; i<=n2;i++) {
-                    factorial2 *=i;
-                }
+
                 System.out.println("your result is : " + factorial);
-                System.out.println("your result is : " + factorial2);
+
             }
         }
 
@@ -78,7 +78,7 @@ public class Main {
             operation = ch.nextInt();
 
             if(operation == 0) {
-                System.out.println("exiting...");
+                System.out.println("exiting...bye!! <3");
                 break; //exit the loop if operation is 0
             }
 
@@ -105,9 +105,7 @@ public class Main {
                 case 7:
                     factorial(n1,n2);
                     break;
-                case 0:
-                    System.out.println(" try again <3 ");
-                    break;
+
 
                 default:
                     System.out.println("entrer operation iss not valid try again");
